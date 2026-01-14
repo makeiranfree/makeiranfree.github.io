@@ -1,0 +1,178 @@
+/* ===================================================================
+THEME VARIABLES
+Change these to quickly adjust colors across the whole site.
+=================================================================== */
+:root {
+    --bg-color: #1e1e1e;
+    --bg-secondary: #2a2a2a;
+    --text-color: #f0f0f0;
+    --text-muted: #ccc;
+    --border-color: #444;
+    --accent-color: #4a90e2;
+    --container-width: 800px;
+}
+
+/* ===================================================================
+BASE STYLES
+General page layout and typography.
+=================================================================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+header,
+section {
+    margin-bottom: 2.5rem;
+}
+
+/* ===================================================================
+TYPOGRAPHY
+Headings and links.
+=================================================================== */
+h1,
+h2 {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================================
+GALLERY
+Responsive grid for images and videos.
+=================================================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.gallery img,
+.gallery video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+.gallery figcaption {
+    padding-top: 10px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* ===================================================================
+EXPANDER COMPONENT
+Collapsible content sections.
+=================================================================== */
+.expander {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-secondary);
+}
+
+.expander-header {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.expander-header:hover {
+    background-color: #333;
+}
+
+/* Plus/minus icon */
+.expander-header::after {
+    content: '+';
+    font-size: 1.2em;
+}
+
+.expander.open .expander-header::after {
+    content: '−';
+}
+
+/* Hidden content area */
+.expander-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.expander.open .expander-content {
+    display: block;
+}
+
+/* Images/videos inside expanders */
+.expander-content figure {
+    margin: 15px 0 0 0;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.expander-content img,
+.expander-content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.expander-content figcaption {
+    padding-top: 10px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* ===================================================================
+SOURCES LIST
+Reference and attribution section.
+=================================================================== */
+.sources ul {
+    padding-left: 20px;
+}
+
+.sources li {
+    margin-bottom: 10px;
+}

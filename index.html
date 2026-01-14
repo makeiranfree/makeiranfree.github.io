@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================= -->
+    <!-- PAGE TITLE: Shows in browser tab. Change this.                -->
+    <!-- ============================================================= -->
+    <title>Your Page Title</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ============================================================= -->
+        <!-- HEADER                                                        -->
+        <!-- The main heading of your page.                                -->
+        <!-- ============================================================= -->
+        <header>
+            <h1>Your Page Title</h1>
+        </header>
+
+        <main>
+
+            <!-- ========================================================= -->
+            <!-- INFORMATION SECTION                                       -->
+            <!-- Add paragraphs of text here. Copy <p> tags as needed.     -->
+            <!-- ========================================================= -->
+            <section>
+                <h2>Information</h2>
+                <p>Your first paragraph goes here. Explain the situation, provide context, etc.</p>
+                <p>Add more paragraphs as needed. Each paragraph should be wrapped in &lt;p&gt; tags.</p>
+            </section>
+
+
+            <!-- ========================================================= -->
+            <!-- GALLERY SECTION                                           -->
+            <!-- For images and videos. Copy the <figure> blocks to add    -->
+            <!-- more items. The gallery is responsive (auto-adjusts).     -->
+            <!-- ========================================================= -->
+            <section>
+                <h2>Gallery</h2>
+                <div class="gallery">
+
+                    <!-- IMAGE: Copy this block to add more images -->
+                    <figure>
+                        <img src="assets/images/your-image.jpg" alt="Brief description">
+                        <figcaption>Caption for this image.</figcaption>
+                    </figure>
+
+                    <!-- VIDEO: Copy this block to add more videos -->
+                    <figure>
+                        <video controls="">
+                            <source src="assets/videos/your-video.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>Caption for this video.</figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+
+            <!-- ========================================================= -->
+            <!-- EXPANDER SECTION                                          -->
+            <!-- Collapsible content blocks. Useful for sensitive media,   -->
+            <!-- detailed explanations, or content warnings.               -->
+            <!-- Copy the entire <div class="expander">...</div> block     -->
+            <!-- to add more expanders.                                    -->
+            <!-- ========================================================= -->
+            <section>
+                <h2>Additional Details</h2>
+
+                <!-- EXPANDER: Copy this block to add more -->
+                <div class="expander">
+                    <div class="expander-header">Click to reveal content</div>
+                    <div class="expander-content">
+                        <p>Hidden content goes here. Can include text, images, or videos.</p>
+
+                        <!-- Example: image inside expander -->
+                        <figure>
+                            <img src="assets/images/hidden-image.jpg" alt="Description">
+                            <figcaption>Caption for hidden image.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- EXPANDER: Another example -->
+                <div class="expander">
+                    <div class="expander-header">Another hidden section</div>
+                    <div class="expander-content">
+                        <p>More content here.</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ========================================================= -->
+            <!-- SOURCES SECTION                                           -->
+            <!-- List your references, links, and attributions here.       -->
+            <!-- Copy <li> lines to add more sources.                      -->
+            <!-- ========================================================= -->
+            <section class="sources">
+                <h2>Sources</h2>
+                <ul>
+                    <li>Source 1: Description of source. <a href="https://example.com" target="_blank">Link</a></li>
+                    <li>Source 2: Another source description.</li>
+                    <li>Source 3: Image attribution or document reference.</li>
+                </ul>
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- JAVASCRIPT: Makes expanders work. Place at end of body.           -->
+    <!-- No need to modify this.                                           -->
+    <!-- ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.expander-header').forEach(function (header) {
+                header.addEventListener('click', function () {
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
