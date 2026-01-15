@@ -25,6 +25,10 @@ body {
     line-height: 1.6;
 }
 
+p {
+    text-align: justify;
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -53,6 +57,10 @@ h1 {
 
 h2 {
     font-size: 1.8em;
+}
+
+ul li {
+  margin-bottom: 0.9rem; /* space between bullets */
 }
 
 a {
