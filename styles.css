@@ -92,10 +92,12 @@ Responsive grid for images and videos.
 
 .gallery img,
 .gallery video {
+
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 2px;
+
 }
 
 .gallery figcaption {
@@ -105,6 +107,11 @@ Responsive grid for images and videos.
     color: var(--text-muted);
 }
 
+.media-lg {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
 /* ===================================================================
 EXPANDER COMPONENT
 Collapsible content sections.
